@@ -1,16 +1,33 @@
-# React + Vite
+# React Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+The React client for the Employee Management System. It uses Vite for local development and Axios to call the Spring Boot API.
 
-Currently, two official plugins are available:
+## Requirements
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Node.js and npm
+- The Spring Boot backend running at `http://localhost:8080`
+- A MySQL database configured for the backend
 
-## React Compiler
+## Install and run
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+From this directory:
 
-## Expanding the Oxlint configuration
+```powershell
+npm install
+npm run dev
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Open the local URL printed by Vite (usually `http://localhost:5173`).
+
+The Axios client currently uses `http://localhost:8080/api` as its base URL. Employee API calls are defined in `src/api/employeeAPI.js`.
+
+## Available scripts
+
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the Vite development server |
+| `npm run build` | Build the frontend for production |
+| `npm run preview` | Preview the production build locally |
+| `npm run lint` | Run Oxlint |
+
+For backend setup, API endpoints, and the full-stack run instructions, see the [project README](../README.md).
